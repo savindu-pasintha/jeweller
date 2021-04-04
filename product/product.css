@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/**------------------- */
+ul li {
+  list-style: none;
+  width: 100%;
+}
+
+/** ---------------- */
+#ttle,
+#ttle .row {
+  width: 100%;
+  height: auto;
+}
+
+#ttle h1 {
+  text-align: center;
+  justify-content: center;
+  font-size: 45px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  padding-top: 105px;
+}
+
+/**------------------ */
+#headings {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 60px;
+}
+
+#headings li {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+#headings li h1 {
+  font-size: 15px;
+  color: grey;
+  font-weight: bold;
+  opacity: 1;
+  width: 100%;
+  justify-content: center;
+}
+
+#headings li h1:hover {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/**-------------------------- */
+.product-description {
+  width: 100%;
+  height: 250px;
+  background-color: none;
+  color: black;
+  text-align: left;
+  padding-top: 15px;
+  font-size: 15px;
+  border: 0px solid grey;
+}
+
+.product-description .product-details {
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bolder;
+  color: black;
+}
+
+.product-description .product-details span:hover {
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.product-description .paragraph {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+}
+
+#btncart {
+  width: 100%;
+  height: 60px;
+  color: black;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#btncart a {
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 10px;
+
+  text-decoration: none;
+}
+
+#btncart a:hover {
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+  border: 0 solid black;
+  font-size: 17px;
+  opacity: 0.9;
+  background-color: rgba(161, 231, 15, 100);
+}
+
+/**--------------------------- */
+.img img {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  transition: transform 2.5s;
+  /* Animation */
+}
+
+.img img:hover {
+  transform: scale(1.08);
+  padding: 0;
+  /* Animation */
+}
+
+.single_gallery_item .img {
+  width: 100%;
+  height: 250px;
+}
+
+/**-------------------------------- */
+< !--- ---------------------------><?php global $priceA;
+global $idA;
+global $codeA;
+global $colorA;
+global $materialA;
+global $weightA;
+global $nameA;
+global $genderA;
+global $descriptionA;
+global $mainimageA;
+global $quentityA;
+
+$priceA="45";
+$idA="55";
+$codeA="121";
+$colorA="red";
+$materialA="gold";
+$weightA="2";
+$nameA="Name";
+$genderA="femail";
+$descriptionA="Description";
+$mainimageA="imgurl";
+$quentityA=999;
+
+if (isset($_POST['submit'])) {
+    $codeA=$_POST['code'];
+    $colorA=$_POST['color'];
+    $materialA=$_POST['material'];
+    $weightA=$_POST['weight'];
+    $nameA=$_POST['name'];
+    $genderA=$_POST['gender'];
+    $descriptionA=$_POST['description'];
+    $mainimageA=$_POST['mainimage'];
+    $priceA=$_POST['price'];
+    $quentityA=$_POST['quentity'];
+
+    echo $nameA . "index";
+    //reason - when form submit page refressh , then all the data cleard in post request variable
+
+    setcookie("name", $nameA, time() + (86400 * 30), "/"); // 86400 = 1 day
+    setcookie("price", $priceA, time() + (86400 * 30), "/"); // 86400 = 1 day
+    setcookie("quentity", $quentityA, time() + (86400 * 30), "/"); // 86400 = 1 day
+    setcookie("weight", $weightA, time() + (86400 * 30), "/"); // 86400 = 1 day
+    setcookie("gender", $genderA, time() + (86400 * 30), "/"); // 86400 = 1 day
+    setcookie("description", $descriptionA, time() + (86400 * 30), "/"); // 86400 = 1 day
+    setcookie("weight", $weightA, time() + (86400 * 30), "/"); // 86400 = 1 day
+    setcookie("mainimage", $mainimageA, time() + (86400 * 30), "/"); // 86400 = 1 day
+    setcookie("code", $codeA, time() + (86400 * 30), "/"); // 86400 = 1 day
+    setcookie("color", $colorA, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+
+}
+
+else {
+    echo "Script";
+}
+
+?>
